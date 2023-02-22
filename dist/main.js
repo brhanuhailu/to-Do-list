@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass TaskStatus {\r\n    constructor() {\r\n      this.completed = false;\r\n    }\r\n\r\n    checked = (task) => {\r\n      task.completed = true;\r\n    }\r\n\r\n    unchecked = (task) => {\r\n      task.completed = false;\r\n    }\r\n  }\r\n  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TaskStatus);\n\n//# sourceURL=webpack://webpack-demo/./src/task.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass TaskStatus {\r\n  constructor() {\r\n    this.completed = false;\r\n    }\r\n\r\n  checked = (task) => {\r\n    task.completed = true;\r\n    }\r\n\r\n  unchecked = (task) => {\r\n    task.completed = false;\r\n    }\r\n  }\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TaskStatus);\n\n//# sourceURL=webpack://webpack-demo/./src/task.js?");
 
 /***/ }),
 
@@ -136,7 +136,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Tasks {\r\n    constructor(description, completed = false, index) {\r\n      this.description = description;\r\n      this.completed = completed;\r\n      this.index = index;\r\n    }\r\n  }\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tasks);\n\n//# sourceURL=webpack://webpack-demo/./src/tasks.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nclass Tasks {\r\n  constructor(description, completed = false, index) {\r\n    this.description = description;\r\n    this.completed = completed;\r\n    this.index = index;\r\n  }\r\n}\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Tasks);\n\n//# sourceURL=webpack://webpack-demo/./src/tasks.js?");
 
 /***/ })
 
