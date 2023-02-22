@@ -5,15 +5,16 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
-.all-container{
+
+.all-container {
   background-color: #000;
   width: 60%;
   margin: 0 auto;
   height: 100vh;
-
 }
+
 .container {
-  top:20px;
+  top: 20px;
   bottom: 20px;
   position: relative;
   display: flex;
