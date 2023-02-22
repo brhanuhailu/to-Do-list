@@ -180,7 +180,7 @@ we would like to thank Microverse organization
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT]https://github.com/brhanuhailu/to-Do-list.git) licensed.
+This project is [MIT](https://github.com/brhanuhailu/to-Do-list/blob/main/LICENSE) licensed.
 (Check the LICENSE file)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
