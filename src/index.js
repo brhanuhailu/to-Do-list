@@ -1,4 +1,5 @@
 /* eslint no-alert: "error" */
+/* eslint-disable max-classes-per-file */
 /* eslint-disable no-use-before-define */
 
 import './style.css';
