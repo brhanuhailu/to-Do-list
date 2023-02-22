@@ -1,19 +1,7 @@
 /* eslint no-alert: "error" */
+/* eslint-disable no-use-before-define */
 
 import './style.css';
- class TaskToDo {
-  constructor() {
-    this.completed = false;
-  }
-
-  checked = (task) => {
-    task.completed = true;
-  }
-
-  unchecked = (task) => {
-    task.completed = false;
-  }
-}
 
 class Tasks {
   constructor(description, completed = false, index) {
