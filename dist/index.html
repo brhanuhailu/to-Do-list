@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do List</title>
-    <script src="https://kit.fontawesome.com/f51be44a58.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100&display=swap" rel="stylesheet">
+    <title>To do list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 <script defer src="main.js"></script></head>
 <body>
-    <div class="all-container">
-    <div class="container">
-        <div class="card-layout">
-            <div class="card-title"> <p>Today`s To Do</p> <i class="fa-solid fa-rotate"></i> </div>
-            <div class="sub-title"><em> <input class='input-element' type="text" placeholder="Add to your list..." /> </em></div>
-            <ul class="card-list" id="card-list"> </ul>
-            <a href="#">Clear all completed</a>
+    <section class="main-conatiner">
+        <div class="list-container">
+            <div class="task-container">
+                <div class="title">
+                    <h1>Today's To do list</h1>
+                   <button class="refresh">
+                    <i class="fa-solid fa-arrows-rotate icon"></i>
+                    <span class="count-task"></span>
+                   </button>
+                </div>
+                <div class="container-todo">
+                   <form action="#" class="form-list">
+                    <input class='input-element' type="text" placeholder="Add to your list..." />
+                    <button class="addbtn"><i class="fa-solid fa-right-to-bracket"></i></button>
+                   </form>
+                    <ul class='task-item'></ul>
+                </div>
+                <button class="clear-all-tasks" type="button">Clear all completed</button>
+            </div>
         </div>
-    </div>
-</div>
+    </section>
 </body>
 </html>
