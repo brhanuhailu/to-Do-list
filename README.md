@@ -26,7 +26,7 @@
 
 # 📖 [To Do list structure] <a name="about-project"></a>
 
-> This is the fourth module project To Do list structure using ES6 and webpack handler. The project is done using Vanilla javascript and HTML as well as css.
+> This is the fourth module project set up To Do list structure using ES6 and webpack handler. The project is done using Vanilla javascript and HTML as well as css.
 > The main activities included in the project is add list and remove all the list. The project focus on the webpack and list structure.
 
 **[To Do list structure]** is the main part of javascript project which inluded how to use webpack and ES6.
@@ -52,8 +52,8 @@
 
 > This project has the following features
 
-- Adding books to the list of local storage
-- Removing books from the list of local storage
+- Create /src file for source files using webpack
+- Used /dist directory to share webpack
 - Separate the code into different modules
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -81,7 +81,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone https://github.com/brhanuhailu/Awesome-books-ES6.git
+  git clone https://github.com/brhanuhailu/to-Do-list.git
 ```
 
 ### Install
@@ -152,7 +152,7 @@ Deployed using Github Pages.
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/brhanuhailu/Awesome-books-ES6/issues).
+Feel free to check the [issues page](https://github.com/brhanuhailu/to-Do-list.git/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,7 +180,7 @@ we would like to thank Microverse organization
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/brhanuhailu/Awesome-books-ES6/issues) licensed.
+This project is [MIT]https://github.com/brhanuhailu/to-Do-list.git) licensed.
 (Check the LICENSE file)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
