@@ -1,26 +1,24 @@
 {
   "name": "webpack-demo",
   "version": "1.0.0",
-  "description": "",
+  "description": "<a name=\"readme-top\"></a>",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch",
     "start": "webpack serve --open",
-    "server": "node server.js",
     "build": "webpack"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brhanuhailu/Set-up-project-webpack.git"
+    "url": "git+https://github.com/brhanuhailu/to-Do-list.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/brhanuhailu/Set-up-project-webpack/issues"
+    "url": "https://github.com/brhanuhailu/to-Do-list/issues"
   },
-  "homepage": "https://github.com/brhanuhailu/Set-up-project-webpack#readme",
+  "homepage": "https://github.com/brhanuhailu/to-Do-list#readme",
   "devDependencies": {
     "css-loader": "^6.7.3",
     "csv-loader": "^3.0.5",
@@ -35,5 +33,6 @@
   },
   "dependencies": {
     "lodash": "^4.17.21"
-  }
+  },
+  "main": "webpack.config.js"
 }
