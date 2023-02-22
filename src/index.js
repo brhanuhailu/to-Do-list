@@ -1,16 +1,7 @@
-/* eslint no-alert: "error" */
-/* eslint-disable max-classes-per-file */
-/* eslint-disable no-use-before-define */
 
 import './style.css';
-
-class Tasks {
-  constructor(description, completed = false, index) {
-    this.description = description;
-    this.completed = completed;
-    this.index = index;
-  }
-}
+import TaskStatus from './task.js';
+import Tasks from './tasks.js';
 
 class Todolist {
   constructor() {
@@ -57,6 +48,24 @@ class Todolist {
         button[element.index].innerHTML = '<i class="fa-solid fa-ellipsis-vertical"></i>';
         this.updatetask(e.target.id, e.target.innerText);
       });
+      inputBox[element.index].addEventListener('change', (e) => {
+        const status = new TaskStatus();
+        if (e.target.checked === true) {
+          status.checked(this.taskDtata[element.index]);
+        } else {
+          status.unchecked(this.taskDtata[element.index]);
+        }
+        this.updatetask(e.target.nextSibling.id, e.target.nextSibling.innerText);
+      });
+      if (this.taskDtata[element.index].completed === true) {
+        inputBox[element.index].setAttribute('checked', 'checked');
+        li[element.index].classList.add('checked');
+        p[element.index].style.textDecoration = 'line-through';
+      } else if (this.taskDtata[element.index].completed === false) {
+        inputBox[element.index].removeAttribute('checked');
+        li[element.index].classList.remove('checked');
+        p[element.index].style.textDecoration = 'none';
+      }
     });
   }
 
@@ -96,8 +105,18 @@ class Todolist {
       this.display();
     }
   }
-}
 
+  Clearallcompletedtasks = () => {
+    this.taskDtata = this.taskDtata.filter((element) => element.completed === false);
+    this.taskDtata.forEach((e, index) => {
+      e.index = index;
+    });
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('TODOLISTDB', JSON.stringify(this.taskDtata));
+      window.location.reload();
+    }
+  };
+}
 let index = 0;
 const completed = false;
 const taskentry = new Todolist();
@@ -122,3 +141,20 @@ window.onload = () => {
   }
   taskentry.display();
 };
+
+const clearalltask = document.querySelector('.clear-all-tasks');
+clearalltask.addEventListener('click', (e) => {
+  e.preventDefault();
+  taskentry.Clearallcompletedtasks();
+  clearalltask.style.textDecoration = 'underline';
+});
+
+const counttask = document.querySelector('.count-task');
+const data = localStorage.getItem('LOCALLISTDB');
+const x = JSON.parse(data);
+counttask.textContent = x.length;
+const refresh = document.querySelector('.refresh');
+refresh.addEventListener('click', () => {
+  localStorage.clear();
+  window.location.reload();
+});
