@@ -1,30 +1,39 @@
-import _ from 'lodash';
 import './style.css';
-import Icon from './icon.png';
-import Data from './data.xml';
-import Notes from './data.csv';
-import printMe from './print.js';
-function component() {
-    const element = document.createElement('div');
-    const btn = document.createElement('button');
-  
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-    element.classList.add('hello');
-      // Add the image to our existing div.
-    const myIcon = new Image();
-    myIcon.src = Icon;
+const todoList = [
+  {
+    index: 1,
+    description: 'Trying',
+    completed: false,
+  },
+  {
+    index: 2,
+    description: 'Challenging',
+    completed: true,
+  },
+];
 
-    element.appendChild(myIcon);
-    
-    btn.innerHTML = 'Click me and check the console!';
-    btn.onclick = printMe;
-    
-    element.appendChild(btn);
-    console.log(Data);
-    console.log(Notes);
-    return element;
-  }
-  
-  document.body.appendChild(component());
+todoList.forEach((activity) => {
+  const { description, completed, index } = activity;
+
+  const cardList = document.querySelector('.card-list');
+
+  const li = document.createElement('li');
+  li.setAttribute('id', index);
+
+  const input = document.createElement('input');
+  input.setAttribute('type', 'checkbox');
+  input.checked = completed;
+  li.appendChild(input);
+
+  const p = document.createElement('p');
+  p.setAttribute('class', 'description');
+  p.textContent = description;
+  li.appendChild(p);
+
+  const i = document.createElement('i');
+  i.setAttribute('class', 'fa-solid fa-ellipsis-vertical');
+  li.appendChild(i);
+
+  cardList.appendChild(li);
+});
