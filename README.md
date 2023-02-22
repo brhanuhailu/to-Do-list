@@ -27,7 +27,7 @@
 # 📖 [To Do list structure] <a name="about-project"></a>
 
 > This is the fourth module project set up To Do list structure using ES6 and webpack handler. The project is done using Vanilla javascript and HTML as well as css.
-> The main activities included in the project is add list and remove all the list. The project focus on the webpack and list structure.
+> In this project, It has been implementd the CRUD (create, read, update, delete) methods. All the elements of the user interface are fully functional and application is completed.
 
 **[To Do list structure]** is the main part of javascript project which inluded how to use webpack and ES6.
 
@@ -43,6 +43,9 @@
     <li><a href="https://www.w3schools.com/html/default.asp">Html</a></li>
     <li><a href="https://www.w3schools.com/css/default.asp">CSS</a></li>
     <li><a href="https://www.w3schools.com/js/">Javascript</a></li>
+    <li><a href="https://webpack.js.org/guides/getting-started/">Webpack bundler</a></li>
+    <li><a href="https://webpack.js.org/guides/getting-started/">HtmlWebpackPlugin</a></li>
+    <li><a href="https://webpack.js.org/guides/output-management/">style-loader and css-loader</a></li>
   </ul>
 </details>
 
@@ -52,9 +55,10 @@
 
 > This project has the following features
 
-- Create /src file for source files using webpack
-- Used /dist directory to share webpack
-- Separate the code into different modules
+- Adding a new task (add a new element to the array).
+- Deleting a task (remove an element from the array).
+- Editing task descriptions.
+- Saved List in local storage
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!--video description-->
@@ -75,6 +79,30 @@ Open terminal on the same folder of the project and run:
  npm install
 ```
 
+Initialize npm install webpack loaclly, and install the webpack-cli
+
+```sh
+ npm install webpack webpack-cli --save-dev
+```
+
+setting up HtmlWebpackPlugin
+
+```sh
+ npm install --save-dev html-webpack-plugin
+```
+
+To build and run the project from /src to /dist use
+
+```sh
+ npm run build
+```
+
+To run the project automatically loading up the page use
+
+```sh
+ npm start
+```
+
 ### Setup
 
 Clone this repository to your desired folder:
@@ -89,13 +117,13 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd Module2-Awsome-Books
+  cd To-Do-List
   npm install
 ```
 
 ### Usage
 
-To run the project, open index.html
+To run the project, open index.html in /dist directory with browser
 
 ### Run tests
 
@@ -139,10 +167,10 @@ Deployed using Github Pages.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Add popup.
+> Add function for Clear all list.
 
-- [ ] Contact details
-- [ ] Frameworks
+- [ ] Add event listner the check box
+- [ ] Use ES6 Modularity
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -160,7 +188,7 @@ Feel free to check the [issues page](https://github.com/brhanuhailu/to-Do-list.g
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> we are so excited to accept you feedback to improve my profession.
+> I am so excited to accept you feedback to improve my profession.
 
 If you like this project like it.
 
