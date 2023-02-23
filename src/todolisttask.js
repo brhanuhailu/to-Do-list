@@ -1,7 +1,7 @@
 import Tasks from './tasks.js';
 import TaskStatus from './task.js';
 
-class Todolist {
+export default class Todolist {
   constructor() {
     this.taskDtata = [];
   }
@@ -111,9 +111,8 @@ class Todolist {
         e.index = index;
       });
       if (typeof window !== 'undefined') {
-        localStorage.setItem('TODOLISTDB', JSON.stringify(this.taskDtata));
+        localStorage.setItem('LOCALLISTDB', JSON.stringify(this.taskDtata));
         window.location.reload();
       }
     };
 }
-export default Todolist;
