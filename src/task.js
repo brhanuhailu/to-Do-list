@@ -11,5 +11,4 @@ class TaskStatus {
     task.completed = false;
   }
 }
-//completed true / false
 export default TaskStatus;
