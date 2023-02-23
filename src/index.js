@@ -1,6 +1,5 @@
 import './style.css';
 import TaskStatus from './task.js';
-import Tasks from './tasks.js';
 import Todolist from './todolisttask.js';
 
 let index = 0;
