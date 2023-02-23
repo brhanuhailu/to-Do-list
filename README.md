@@ -64,7 +64,13 @@
 <!--video description-->
 <!-- LIVE DEMO -->
 
-<!-- GETTING STARTED -->
+## 🚀 Live Demo <a name="live-demo"></a>
+
+> Find the deployment link the live demo.
+
+- [Live Demo Link](https://brhanuhailu.github.io/to-Do-list/dist/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
