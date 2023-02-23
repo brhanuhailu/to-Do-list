@@ -1,9 +1,10 @@
 import Tasks from './tasks.js';
+import TaskStatus from './task.js';
 
 class Todolist {
-    constructor() {
-      this.taskDtata = [];
-    }
+  constructor() {
+    this.taskDtata = [];
+  }
 
     display = () => {
       const taskitem = document.querySelector('.task-item');
@@ -113,5 +114,5 @@ class Todolist {
         window.location.reload();
       }
     };
-  }
-  export default Todolist;
+}
+export default Todolist;
