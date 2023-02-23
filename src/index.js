@@ -151,10 +151,9 @@ clearalltask.addEventListener('click', (e) => {
 
 const counttask = document.querySelector('.count-task');
 // const data = localStorage.getItem('LOCALLISTDB');
-if (localStorage.getItem('LOCALLISTDB') === ""){
+if (localStorage.getItem('LOCALLISTDB') === '') {
   counttask.textContent = 0;
-}
-else{
+} else {
   const data = localStorage.getItem('LOCALLISTDB');
   const x = JSON.parse(data);
   counttask.textContent = x.length;
