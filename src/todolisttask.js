@@ -20,6 +20,7 @@ class Todolist {
         p[element.index].textContent = element.description;
         p[element.index].setAttribute('id', element.index);
         p[element.index].contentEditable = true;
+        // checkbox set
         const inputBox = [];
         inputBox[element.index] = document.createElement('input');
         inputBox[element.index].setAttribute('type', 'checkbox');
