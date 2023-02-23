@@ -145,13 +145,21 @@ const clearalltask = document.querySelector('.clear-all-tasks');
 clearalltask.addEventListener('click', (e) => {
   e.preventDefault();
   taskentry.Clearallcompletedtasks();
+  localStorage.clear();
   clearalltask.style.textDecoration = 'underline';
 });
 
 const counttask = document.querySelector('.count-task');
-const data = localStorage.getItem('LOCALLISTDB');
-const x = JSON.parse(data);
-counttask.textContent = x.length;
+// const data = localStorage.getItem('LOCALLISTDB');
+if (localStorage.getItem('LOCALLISTDB') === ""){
+  counttask.textContent = 0;
+}
+else{
+  const data = localStorage.getItem('LOCALLISTDB');
+  const x = JSON.parse(data);
+  counttask.textContent = x.length;
+}
+
 const refresh = document.querySelector('.refresh');
 refresh.addEventListener('click', () => {
   localStorage.clear();
