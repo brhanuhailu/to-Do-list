@@ -1,7 +1,7 @@
 import Tasks from './tasks.js';
 import TaskStatus from './task.js';
 
-class Todolist {
+export default class Todolist {
   constructor() {
     this.taskDtata = [];
   }
@@ -20,6 +20,7 @@ class Todolist {
         p[element.index].textContent = element.description;
         p[element.index].setAttribute('id', element.index);
         p[element.index].contentEditable = true;
+        // checkbox set
         const inputBox = [];
         inputBox[element.index] = document.createElement('input');
         inputBox[element.index].setAttribute('type', 'checkbox');
@@ -110,9 +111,8 @@ class Todolist {
         e.index = index;
       });
       if (typeof window !== 'undefined') {
-        localStorage.setItem('TODOLISTDB', JSON.stringify(this.taskDtata));
+        localStorage.setItem('LOCALLISTDB', JSON.stringify(this.taskDtata));
         window.location.reload();
       }
     };
 }
-export default Todolist;
