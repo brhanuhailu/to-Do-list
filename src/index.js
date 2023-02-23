@@ -1,39 +1,51 @@
 import './style.css';
+import Todolist from './todolisttask.js';
 
-const todoList = [
-  {
-    index: 1,
-    description: 'Trying',
-    completed: false,
-  },
-  {
-    index: 2,
-    description: 'Challenging',
-    completed: true,
-  },
-];
+let index = 0;
+const completed = false;
+const taskentry = new Todolist();
+const addnewtask = document.querySelector('.addbtn');
+const inputelement = document.querySelector('.input-element');
+addnewtask.addEventListener('click', () => {
+  if (inputelement.value === '') {
+    addnewtask.setCustomValidity('This is required field!');
+  } else {
+    taskentry.addtask(inputelement.value, completed, index);
+    taskentry.display();
+    inputelement.value = '';
+    index += 1;
+  }
+});
 
-todoList.forEach((activity) => {
-  const { description, completed, index } = activity;
+window.onload = () => {
+  taskentry.taskDtata = JSON.parse(localStorage.getItem('LOCALLISTDB' || '[]'));
+  if (taskentry.taskDtata === null) {
+    taskentry.taskDtata = [];
+    return;
+  }
+  taskentry.display();
+};
 
-  const cardList = document.querySelector('.card-list');
+const clearalltask = document.querySelector('.clear-all-tasks');
+clearalltask.addEventListener('click', (e) => {
+  e.preventDefault();
+  taskentry.Clearallcompletedtasks();
+  localStorage.clear();
+  clearalltask.style.textDecoration = 'underline';
+});
 
-  const li = document.createElement('li');
-  li.setAttribute('id', index);
+const counttask = document.querySelector('.count-task');
+// const data = localStorage.getItem('LOCALLISTDB');
+if (localStorage.getItem('LOCALLISTDB') === '') {
+  counttask.textContent = 0;
+} else {
+  const data = localStorage.getItem('LOCALLISTDB');
+  const x = JSON.parse(data);
+  counttask.textContent = x.length;
+}
 
-  const input = document.createElement('input');
-  input.setAttribute('type', 'checkbox');
-  input.checked = completed;
-  li.appendChild(input);
-
-  const p = document.createElement('p');
-  p.setAttribute('class', 'description');
-  p.textContent = description;
-  li.appendChild(p);
-
-  const i = document.createElement('i');
-  i.setAttribute('class', 'fa-solid fa-ellipsis-vertical');
-  li.appendChild(i);
-
-  cardList.appendChild(li);
+const refresh = document.querySelector('.refresh');
+refresh.addEventListener('click', () => {
+  localStorage.clear();
+  window.location.reload();
 });
