@@ -25,7 +25,7 @@ window.onload = () => {
   }
   taskentry.display();
 };
-// Clear all completed
+
 const clearalltask = document.querySelector('.clear-all-tasks');
 clearalltask.addEventListener('click', (e) => {
   e.preventDefault();
@@ -34,7 +34,7 @@ clearalltask.addEventListener('click', (e) => {
 });
 
 const counttask = document.querySelector('.count-task');
-// const data = localStorage.getItem('LOCALLISTDB');
+// const data = localStorage.getItem('LOCALLISTDB')
 if (localStorage.getItem('LOCALLISTDB') === '') {
   counttask.textContent = 0;
 } else {
